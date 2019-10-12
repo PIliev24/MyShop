@@ -8,11 +8,11 @@ using System.Web;
 
 namespace MyShop.Core.Contracts
 {
-    public interface IBasket
+    public interface IBasketService
     {
         void AddToBasket(HttpContextBase httpContext, string productId);
         void RemoveFromBasket(HttpContextBase httpContext, string itemId);
-        List<BasketItemViewModel> GetBasket(HttpContextBase httpContext);
+        List<BasketItemViewModel> GetBasketItems(HttpContextBase httpContext);
         BasketSummaryViewModel GetBasketSummary(HttpContextBase httpContext);
     }
 }
